@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8" />
-<title>视频轨迹地图同步工具</title>
+<title>公路时空智映平台</title>
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="stylesheet" href="css/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <style>
   html,body{margin:0;padding:0;height:100%;width:100%;overflow:hidden;font-family:"Microsoft YaHei",Arial,sans-serif;}
   #container{display:flex;flex-direction:row;width:100%;height:100%;}
@@ -15,6 +15,11 @@
   }
   video{width:96%;height:auto;max-height:92%;background:#000;outline:none;border:2px solid #333;border-radius:6px;}
   #mapPanel{flex:1;display:flex;flex-direction:column;}
+  #appHeader{
+    padding:10px 12px;
+    background:linear-gradient(90deg,#1f3b57,#2c5b7c);
+    color:#fff;font-size:18px;font-weight:700;letter-spacing:1px;text-align:center;
+  }
   #controls{
     padding:6px 10px;background:#f7f7f7;border-bottom:1px solid #ccc;
     font-size:13px;line-height:1.6;
@@ -51,6 +56,7 @@
   </div>
   <div id="dragHandle"></div>
   <div id="mapPanel">
+    <div id="appHeader">公路时空智映平台</div>
     <div id="controls">
       <div class="control-row">
         <label>🎬 视频文件</label>
@@ -139,11 +145,11 @@
   </div>
 </div>
 
-<script src="js/leaflet.js"></script>
-<link rel="stylesheet" href="css/MarkerCluster.css" />
-<link rel="stylesheet" href="css/MarkerCluster.Default.css" />
-<script src="js/leaflet.markercluster.js"></script>
-<script src="js/app.obf.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="app.obf.js"></script>
 <script>
 // 调试：检查时间标记点功能模块是否正常挂载
 document.addEventListener('DOMContentLoaded', function() {
